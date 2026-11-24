@@ -1,0 +1,138 @@
+{
+  "users": {
+    "title": "Users",
+    "search": "Search by name, email, or phone",
+    "reason": "Reason (optional)",
+    "unlockHint": "Unlocking will reset the failed login counter. The user will be able to sign in again.",
+    "columns": {
+      "name": "Name",
+      "email": "Email",
+      "roles": "Roles",
+      "status": "Status",
+      "created": "Created"
+    },
+    "actions": {
+      "view": "View",
+      "suspend": "Suspend",
+      "reactivate": "Reactivate",
+      "unlock": "Unlock",
+      "assignRoles": "Assign roles"
+    },
+    "roles": {
+      "SUPER_ADMIN": "Super Admin",
+      "ADMIN": "Admin",
+      "KYC_ANALYST": "KYC Analyst",
+      "KYC_SUPERVISOR": "KYC Supervisor",
+      "COMPLIANCE_OFFICER": "Compliance",
+      "SUPPORT": "Support",
+      "CUSTOMER": "Customer"
+    }
+  },
+  "roles": {
+    "title": "Roles",
+    "columns": {
+      "code": "Code",
+      "name": "Name",
+      "description": "Description",
+      "system": "System"
+    }
+  },
+  "permissions": {
+    "title": "Permissions",
+    "columns": {
+      "code": "Code",
+      "resource": "Resource",
+      "action": "Action",
+      "description": "Description"
+    }
+  },
+  "countries": {
+    "title": "Countries",
+    "add": "Add country",
+    "currencies": "Currencies",
+    "languages": "Languages",
+    "columns": {
+      "name": "Country",
+      "iso2": "ISO2",
+      "iso3": "ISO3",
+      "defaultCurrency": "Currency",
+      "defaultLanguage": "Language",
+      "status": "Status"
+    },
+    "status": {
+      "enabled": "Enabled",
+      "disabled": "Disabled"
+    },
+    "configuration": {
+      "title": "Configuration",
+      "versions": "Versions",
+      "publish": "Publish new version",
+      "rollback": "Roll back",
+      "currentVersion": "Active version",
+      "changeSummary": "Change summary",
+      "version": "Version",
+      "status": "Status",
+      "published": "Published",
+      "summary": "Summary",
+      "json": "Configuration (JSON)",
+      "rollbackConfirm": "Roll back to version {{version}}?"
+    }
+  },
+  "kycRequirements": {
+    "title": "KYC Requirements",
+    "code": "Requirement code",
+    "documentType": "Document type",
+    "customerType": "Customer type",
+    "required": "Required",
+    "enabled": "Enabled",
+    "description": "Description",
+    "mimeTypes": "Allowed MIME types",
+    "maxFileSize": "Max file size (bytes)",
+    "validityDays": "Validity (days)"
+  },
+  "orgRequirements": {
+    "title": "Organization Requirements",
+    "code": "Requirement code",
+    "organizationType": "Organization type",
+    "required": "Required",
+    "enabled": "Enabled",
+    "description": "Description",
+    "validationRule": "Validation rule (JSON, optional)"
+  },
+  "templates": {
+    "title": "Notification templates",
+    "add": "New template",
+    "preview": "Preview",
+    "code": "Template code",
+    "channel": "Channel",
+    "language": "Language",
+    "subject": "Subject template",
+    "body": "Body template",
+    "enabled": "Enabled",
+    "variables": "Sample variables",
+    "columns": {
+      "code": "Code",
+      "channel": "Channel",
+      "language": "Language",
+      "version": "Version",
+      "status": "Status",
+      "updated": "Updated"
+    }
+  },
+  "deliveries": {
+    "title": "Deliveries",
+    "status": "Status",
+    "statusLabel": "Status",
+    "channel": "Channel",
+    "search": "Search",
+    "provider": "Provider",
+    "attempts": "Attempts",
+    "created": "Created",
+    "detail": "Delivery detail",
+    "failureCode": "Failure code",
+    "failureReason": "Failure reason",
+    "submitted": "Submitted",
+    "delivered": "Delivered",
+    "retry": "Retry"
+  }
+}

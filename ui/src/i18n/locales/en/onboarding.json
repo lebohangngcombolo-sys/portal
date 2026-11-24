@@ -1,0 +1,21 @@
+{
+  "steps": {
+    "personal": "Personal details",
+    "contact": "Contact details",
+    "review": "Review",
+    "basic": "Basic details",
+    "registration": "Registration",
+    "address": "Address",
+    "representatives": "Representatives",
+    "beneficialOwners": "Beneficial owners",
+    "declaration": "Declaration"
+  },
+  "welcome": {
+    "title": "Welcome to TradeBridge Africa",
+    "subtitle": "Let's get you set up. This takes about 5 minutes."
+  },
+  "complete": {
+    "title": "You're all set",
+    "subtitle": "Your information has been submitted. We'll be in touch shortly."
+  }
+}

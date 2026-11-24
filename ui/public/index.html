@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0B5FFF" />
+    <meta name="description" content="TradeBridge Africa — trade finance onboarding and KYC platform" />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/assets/logos/tradebridge-africa-logo.svg" />
+
+    <title>TradeBridge Africa</title>
+
+    <!-- Runtime config injected by the container entrypoint at deploy time.
+         In local dev this file is served as-is (empty default). -->
+    <script src="/config.js"></script>
+
+    <style>
+      /* Critical inline CSS — prevents flash before bundle loads */
+      html, body, #root { height: 100%; margin: 0; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: #F7F8FA;
+        color: #0B1220;
+      }
+      #tb-bootstrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: #5B6473;
+        font-size: 14px;
+      }
+      #tb-bootstrap .spinner {
+        width: 28px;
+        height: 28px;
+        margin-right: 12px;
+        border: 3px solid #D5DAE1;
+        border-top-color: #0B5FFF;
+        border-radius: 50%;
+        animation: tb-spin 0.8s linear infinite;
+      }
+      @keyframes tb-spin { to { transform: rotate(360deg); } }
+      noscript {
+        display: block;
+        padding: 24px;
+        text-align: center;
+        color: #0B1220;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      TradeBridge Africa requires JavaScript to run. Please enable JavaScript in your browser.
+    </noscript>
+
+    <div id="root">
+      <div id="tb-bootstrap">
+        <div class="spinner"></div>
+        <span>Loading TradeBridge Africa…</span>
+      </div>
+    </div>
+  </body>
+</html>

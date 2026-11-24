@@ -1,0 +1,338 @@
+{
+  "app": {
+    "name": "TradeBridge Africa",
+    "tagline": "Trade finance onboarding for African businesses"
+  },
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "cancel": "Cancel",
+    "save": "Save",
+    "saving": "Saving…",
+    "submit": "Submit",
+    "submitting": "Submitting…",
+    "continue": "Continue",
+    "back": "Back",
+    "next": "Next",
+    "close": "Close",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "remove": "Remove",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "clear": "Clear",
+    "loading": "Loading…",
+    "error": "Something went wrong",
+    "retry": "Retry",
+    "logout": "Log out",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "all": "All",
+    "view": "View",
+    "default": "Default",
+    "enable": "Enable",
+    "disable": "Disable",
+    "friend": "there",
+    "verified": "Verified",
+    "unverified": "Unverified",
+    "unknown": "Unknown"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "organizations": "Organizations",
+    "kycCases": "KYC Cases",
+    "notifications": "Notifications",
+    "profile": "Profile",
+    "security": "Security",
+    "preferences": "Preferences",
+    "sessions": "Sessions",
+    "admin": "Administration",
+    "users": "Users",
+    "roles": "Roles",
+    "permissions": "Permissions",
+    "countries": "Countries",
+    "templates": "Notification Templates",
+    "deliveries": "Deliveries",
+    "help": "Help",
+    "support": "Support"
+  },
+  "landing": {
+    "heroSubtitle": "Fast, compliant onboarding for businesses across Africa. Complete KYC once. Trade with confidence.",
+    "features": {
+      "kyc": {
+        "title": "Compliant KYC",
+        "body": "Meet FICA, GDPR, and jurisdictional requirements in a single, auditable workflow."
+      },
+      "security": {
+        "title": "Bank-grade security",
+        "body": "Two-factor authentication, session management, and rate-limited APIs."
+      },
+      "scale": {
+        "title": "Built to scale",
+        "body": "Multi-country, multi-currency, and role-aware from day one."
+      }
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome back, {{firstName}}",
+    "subtitle": "Here's what's happening with your account.",
+    "kycStatus": "KYC status",
+    "profileStatus": "Profile completion",
+    "recentActivity": "Recent activity",
+    "quickActions": "Quick actions",
+    "startOnboarding": "Start onboarding",
+    "viewKyc": "View KYC case",
+    "noActivity": "No recent activity.",
+    "unreadNotifications": "{{count}} unread notification(s)",
+    "verifyEmailHint": "Your email is not verified yet. Check your inbox to continue.",
+    "completeProfileHint": "Complete your profile to unlock onboarding.",
+    "noAssignedCases": "No assigned cases right now."
+  },
+  "notifications": {
+    "center": {
+      "title": "Notifications",
+      "empty": "You're all caught up.",
+      "markRead": "Mark as read",
+      "markAllRead": "Mark all as read",
+      "archive": "Archive",
+      "unreadOnly": "Unread only",
+      "all": "All",
+      "unread": "New",
+      "noSubject": "(No subject)"
+    },
+    "preferences": {
+      "title": "Notification preferences",
+      "subtitle": "Choose how you'd like to hear from us.",
+      "channels": {
+        "EMAIL": "Email",
+        "SMS": "SMS",
+        "IN_APP": "In-app"
+      },
+      "mandatory": "Mandatory",
+      "mandatoryNote": "Security-critical notifications are always sent and cannot be disabled."
+    }
+  },
+  "organization": {
+    "list": {
+      "title": "Organizations",
+      "createOne": "Add an organization",
+      "view": "View organization",
+      "empty": "You have not added an organization yet.",
+      "loadError": "We could not load your organizations. Please try again.",
+      "columns": {
+        "name": "Legal name",
+        "type": "Organization type",
+        "registration": "Registration number",
+        "status": "Status",
+        "updated": "Last updated"
+      }
+    },
+    "create": {
+      "title": "Organization details",
+      "subtitle": "Tell us about your business.",
+      "success": "Organization created",
+      "sections": {
+        "basic": "Basic information",
+        "registration": "Registration",
+        "contact": "Business address",
+        "address": "Business address"
+      },
+      "fields": {
+        "legalName": "Legal name",
+        "tradingName": "Trading name",
+        "organizationType": "Organization type",
+        "registrationNumber": "Registration number",
+        "taxNumber": "Tax number",
+        "incorporationDate": "Date of incorporation",
+        "registrationAuthority": "Registration authority",
+        "businessDescription": "Business description",
+        "website": "Website",
+        "addressType": "Address type",
+        "addressLine1": "Address line 1",
+        "addressLine2": "Address line 2",
+        "city": "City",
+        "region": "Province or region",
+        "postalCode": "Postal code",
+        "country": "Country"
+      },
+      "organizationTypes": {
+        "COMPANY": "Company",
+        "SOLE_PROPRIETOR": "Sole proprietor",
+        "PARTNERSHIP": "Partnership",
+        "NONPROFIT": "Non-profit",
+        "OTHER": "Other"
+      }
+    },
+    "edit": {
+      "notAllowed": "This organization cannot be edited in its current status."
+    },
+    "representatives": {
+      "title": "Representatives",
+      "add": "Add representative",
+      "removeTitle": "Remove representative?",
+      "removeBody": "Are you sure you want to remove this representative?",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "phoneNumber": "Phone number",
+      "signatoryLabel": "Authorized signatory",
+      "types": {
+        "selectLabel": "Representative type",
+        "DIRECTOR": "Director",
+        "OFFICER": "Officer",
+        "SHAREHOLDER": "Shareholder",
+        "SIGNATORY": "Authorized signatory",
+        "OTHER": "Other"
+      }
+    },
+    "beneficialOwners": {
+      "title": "Beneficial owners",
+      "add": "Add beneficial owner",
+      "removeTitle": "Remove beneficial owner?",
+      "removeBody": "Are you sure you want to remove this beneficial owner?",
+      "fields": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "dateOfBirth": "Date of birth",
+        "nationality": "Nationality",
+        "residence": "Country of residence",
+        "ownershipPercentage": "Ownership percentage",
+        "controlType": "Type of control",
+        "identityReference": "Identity document number"
+      },
+      "controlTypes": {
+        "DIRECT": "Direct ownership",
+        "INDIRECT": "Indirect ownership",
+        "CONTROL": "Other control",
+        "TRUST": "Trust",
+        "NOMINEE": "Nominee"
+      },
+      "aggregate": {
+        "belowThreshold": "The declared ownership is below the reporting threshold."
+      },
+      "declaration": {
+        "title": "Ownership declaration",
+        "submitted": "Ownership declaration submitted",
+        "subtitle": "Declare the beneficial owners who ultimately own or control this organization.",
+        "body": "Describe the organization's ownership structure.",
+        "confirmNoOwners": "I confirm there are no beneficial owners to declare.",
+        "submit": "Submit declaration"
+      }
+    },
+    "submit": {
+      "title": "Submit organization",
+      "success": "Organization submitted for review",
+      "confirmTitle": "Confirm submission",
+      "confirmBody": "Please check that the organization details and supporting information are complete before submitting.",
+      "confirmSubmit": "Submit for review"
+    },
+    "withdraw": {
+      "title": "Withdraw submission",
+      "success": "Submission withdrawn",
+      "confirmBody": "Withdrawing will return this organization to draft status.",
+      "reason": "Reason for withdrawal",
+      "confirmWithdraw": "Withdraw submission"
+    }
+  },
+  "account": {
+    "profile": {
+      "title": "Profile",
+      "subtitle": "Manage your personal information.",
+      "fields": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email address",
+        "phoneNumber": "Phone number",
+        "countryCode": "Country",
+        "preferredLanguage": "Preferred language"
+      },
+      "customerProfile": "Customer profile",
+      "customerNumber": "Customer number",
+      "status": "Status"
+    },
+    "security": {
+      "title": "Security",
+      "subtitle": "Manage your password, two-factor authentication, and signed-in devices.",
+      "password": {
+        "title": "Password",
+        "description": "Use a strong, unique password to protect your account.",
+        "change": "Change password",
+        "currentPassword": "Current password",
+        "newPassword": "New password",
+        "confirmPassword": "Confirm new password",
+        "success": "Password updated."
+      },
+      "mfa": {
+        "title": "Two-factor authentication",
+        "description": "Add an extra layer of protection by requiring an authenticator code when signing in.",
+        "status": "Status",
+        "statusUnknown": "Unavailable",
+        "statusUnavailable": "Two-factor authentication status could not be loaded.",
+        "enable": "Enable two-factor authentication",
+        "disable": "Disable two-factor authentication",
+        "enabled": "Enabled",
+        "disabled": "Not enabled",
+        "disabledSuccess": "MFA disabled",
+        "setup": {
+          "title": "Set up two-factor authentication",
+          "subtitle": "Scan this QR code with your authenticator app (Google Authenticator, Authy, 1Password).",
+          "manualEntry": "Or enter this secret manually:",
+          "next": "Next: enter the code",
+          "verify": "Verify code",
+          "complete": "MFA enabled",
+          "reauth": "Confirm your password",
+          "recoveryCodes": {
+            "title": "Save your recovery codes",
+            "subtitle": "These codes are the only way to access your account if you lose your authenticator. Store them somewhere safe.",
+            "acknowledged": "I've saved my recovery codes",
+            "download": "Download codes"
+          }
+        },
+        "disableConfirm": "Disabling two-factor authentication weakens your account security. Confirm with your current TOTP code.",
+        "regenerateRecovery": "Regenerate recovery codes"
+      },
+      "sessions": {
+        "title": "Sessions",
+        "subtitle": "Devices where you're currently signed in.",
+        "manage": "Manage sessions",
+        "current": "This device",
+        "revoke": "Revoke",
+        "revokeAll": "Sign out everywhere",
+        "revokeAllConfirm": "This will sign you out of all devices. You'll need to sign in again.",
+        "empty": "No active sessions.",
+        "unknownDevice": "Unknown device",
+        "cannotRevokeCurrent": "Cannot revoke the current session",
+        "revoked": "Session revoked",
+        "revokedAll": "All sessions signed out",
+        "columns": {
+          "device": "Device",
+          "ip": "IP address",
+          "lastActivity": "Last active",
+          "actions": "Actions"
+        }
+      }
+    }
+  },
+  "password": {
+    "strength": {
+      "0": "Very weak",
+      "1": "Weak",
+      "2": "Fair",
+      "3": "Strong",
+      "4": "Very strong"
+    }
+  },
+  "maintenance": {
+    "title": "Scheduled maintenance",
+    "body": "TradeBridge Africa is currently undergoing planned maintenance. Please try again shortly."
+  },
+  "footer": {
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "contact": "Contact support",
+    "copyright": "© {{year}} TradeBridge Africa. All rights reserved."
+  }
+}

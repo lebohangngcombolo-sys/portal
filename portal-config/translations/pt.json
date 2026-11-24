@@ -1,0 +1,453 @@
+{
+  "_meta": {
+    "language": "pt",
+    "name": "Portuguese",
+    "nativeName": "Português",
+    "version": 1,
+    "generatedAt": "2026-11-11T00:00:00Z"
+  },
+  "common": {
+    "yes": "Sim",
+    "no": "Não",
+    "ok": "OK",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "saving": "A guardar…",
+    "submit": "Submeter",
+    "submitting": "A submeter…",
+    "continue": "Continuar",
+    "back": "Voltar",
+    "next": "Seguinte",
+    "close": "Fechar",
+    "confirm": "Confirmar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "remove": "Remover",
+    "add": "Adicionar",
+    "search": "Pesquisar",
+    "filter": "Filtrar",
+    "clear": "Limpar",
+    "loading": "A carregar…",
+    "error": "Ocorreu um erro",
+    "retry": "Tentar novamente",
+    "logout": "Terminar sessão",
+    "signIn": "Entrar",
+    "signUp": "Registar"
+  },
+  "auth": {
+    "login": {
+      "title": "Entrar na TradeBridge Africa",
+      "emailLabel": "Email ou número de telefone",
+      "passwordLabel": "Palavra-passe",
+      "forgotPassword": "Esqueceu-se da palavra-passe?",
+      "submit": "Entrar",
+      "noAccount": "Ainda não tem conta?",
+      "createOne": "Criar conta",
+      "invalidCredentials": "Email/telefone ou palavra-passe incorretos.",
+      "accountLocked": "A conta está temporariamente bloqueada. Tente novamente em 15 minutos.",
+      "accountSuspended": "Esta conta está suspensa. Contacte o suporte."
+    },
+    "register": {
+      "title": "Criar a sua conta TradeBridge Africa",
+      "firstName": "Nome próprio",
+      "lastName": "Apelido",
+      "email": "Endereço de email",
+      "phoneNumber": "Número de telefone (com código do país)",
+      "password": "Palavra-passe",
+      "confirmPassword": "Confirmar palavra-passe",
+      "country": "País de residência",
+      "language": "Idioma preferido",
+      "acceptTerms": "Aceito os Termos de Serviço e a Política de Privacidade",
+      "submit": "Criar conta",
+      "hasAccount": "Já tem conta?",
+      "signIn": "Entrar",
+      "passwordHint": "Pelo menos 12 caracteres com maiúsculas, minúsculas, dígitos e símbolos.",
+      "emailInUse": "Já existe uma conta com este email.",
+      "phoneInUse": "Já existe uma conta com este número de telefone."
+    },
+    "verifyEmail": {
+      "title": "Verifique o seu email",
+      "subtitle": "Introduza o código de 6 dígitos enviado para {email}.",
+      "codeLabel": "Código de verificação",
+      "submit": "Verificar",
+      "resend": "Reenviar código",
+      "resent": "Um novo código foi enviado. Verifique a sua caixa de entrada.",
+      "expired": "Este código expirou. Peça um novo.",
+      "invalid": "O código está incorreto. Tente novamente."
+    },
+    "forgotPassword": {
+      "title": "Recuperar palavra-passe",
+      "subtitle": "Introduza o email associado à sua conta. Se existir, enviaremos um código de recuperação.",
+      "submit": "Enviar código de recuperação",
+      "sent": "Se a conta existir, receberá um código em breve."
+    },
+    "resetPassword": {
+      "title": "Definir nova palavra-passe",
+      "codeLabel": "Código de recuperação",
+      "newPassword": "Nova palavra-passe",
+      "confirmPassword": "Confirmar nova palavra-passe",
+      "submit": "Atualizar palavra-passe",
+      "success": "Palavra-passe atualizada. Já pode entrar."
+    },
+    "mfa": {
+      "challengeTitle": "Autenticação de dois fatores",
+      "challengeSubtitle": "Introduza o código de 6 dígitos da sua aplicação autenticadora.",
+      "codeLabel": "Código de autenticação",
+      "verify": "Verificar",
+      "backupCode": "Usar um código de recuperação",
+      "invalid": "O código está incorreto. Tente novamente.",
+      "expired": "Este desafio expirou. Entre novamente."
+    }
+  },
+  "navigation": {
+    "dashboard": "Painel",
+    "organizations": "Organizações",
+    "kycCases": "Processos KYC",
+    "notifications": "Notificações",
+    "profile": "Perfil",
+    "security": "Segurança",
+    "preferences": "Preferências",
+    "sessions": "Sessões",
+    "admin": "Administração",
+    "users": "Utilizadores",
+    "roles": "Funções",
+    "permissions": "Permissões",
+    "countries": "Países",
+    "templates": "Modelos de notificação",
+    "deliveries": "Entregas",
+    "help": "Ajuda",
+    "support": "Suporte"
+  },
+  "dashboard": {
+    "welcome": "Bem-vindo de volta, {firstName}",
+    "subtitle": "Aqui está o que se passa com a sua conta.",
+    "kycStatus": "Estado KYC",
+    "profileStatus": "Preenchimento do perfil",
+    "recentActivity": "Atividade recente",
+    "quickActions": "Ações rápidas",
+    "startOnboarding": "Iniciar onboarding",
+    "viewKyc": "Ver processo KYC",
+    "noActivity": "Sem atividade recente.",
+    "unreadNotifications": "{count} notificação(ões) por ler"
+  },
+  "kyc": {
+    "statuses": {
+      "DRAFT": "Rascunho",
+      "SUBMITTED": "Submetido",
+      "IN_REVIEW": "Em revisão",
+      "INFORMATION_REQUESTED": "Informação solicitada",
+      "RESUBMITTED": "Resubmetido",
+      "APPROVED": "Aprovado",
+      "REJECTED": "Rejeitado"
+    },
+    "organizationStatuses": {
+      "DRAFT": "Rascunho",
+      "PENDING_REVIEW": "Aguarda revisão",
+      "APPROVED": "Aprovado",
+      "REJECTED": "Rejeitado",
+      "WITHDRAWN": "Retirado"
+    },
+    "caseType": {
+      "ONBOARDING": "Onboarding",
+      "PERIODIC_REVIEW": "Revisão periódica",
+      "ENHANCED_DUE_DILIGENCE": "Diligência reforçada"
+    },
+    "riskLevels": {
+      "LOW": "Baixo",
+      "MEDIUM": "Médio",
+      "HIGH": "Alto",
+      "CRITICAL": "Crítico"
+    },
+    "requirements": {
+      "DIRECTOR_ID_COPY": "Cópia autenticada do documento do administrador",
+      "COMPANY_REGISTRATION_CERT": "Certidão de registo da empresa",
+      "CERTIDAO_PERMANENTE": "Certidão Permanente",
+      "PROOF_OF_ADDRESS": "Comprovativo de morada da empresa (últimos 3 meses)",
+      "PASSPORT_COPY": "Cópia da página de identificação do passaporte"
+    },
+    "actions": {
+      "startCase": "Iniciar novo processo KYC",
+      "assignReviewer": "Atribuir revisor",
+      "requestInformation": "Solicitar mais informação",
+      "resubmit": "Resubmeter",
+      "approve": "Aprovar",
+      "reject": "Rejeitar"
+    },
+    "decisions": {
+      "APPROVED": "Aprovado",
+      "REJECTED": "Rejeitado"
+    }
+  },
+  "organization": {
+    "list": {
+      "title": "Organizações",
+      "empty": "Ainda não tem organizações.",
+      "createOne": "Criar a sua primeira organização",
+      "columns": {
+        "name": "Organização",
+        "type": "Tipo",
+        "registration": "Registo",
+        "status": "Estado",
+        "updated": "Última atualização"
+      }
+    },
+    "create": {
+      "title": "Criar organização",
+      "subtitle": "Indique os dados da sua empresa. Pode guardar um rascunho e voltar mais tarde.",
+      "sections": {
+        "basic": "Dados básicos",
+        "registration": "Dados de registo",
+        "contact": "Dados de contacto"
+      },
+      "fields": {
+        "legalName": "Designação social",
+        "tradingName": "Nome comercial",
+        "organizationType": "Tipo de organização",
+        "registrationNumber": "Número de registo",
+        "taxNumber": "Número de contribuinte / IVA",
+        "incorporationDate": "Data de constituição",
+        "registrationAuthority": "Autoridade de registo",
+        "businessDescription": "Descrição da atividade",
+        "website": "Website"
+      },
+      "organizationTypes": {
+        "COMPANY": "Sociedade",
+        "SOLE_PROPRIETOR": "Empresário individual",
+        "PARTNERSHIP": "Sociedade em nome coletivo",
+        "NONPROFIT": "Sem fins lucrativos",
+        "OTHER": "Outro"
+      }
+    },
+    "representatives": {
+      "title": "Representantes",
+      "subtitle": "Adicione administradores, responsáveis e outros signatários.",
+      "add": "Adicionar representante",
+      "types": {
+        "DIRECTOR": "Administrador",
+        "OFFICER": "Responsável",
+        "SHAREHOLDER": "Acionista",
+        "SIGNATORY": "Signatário",
+        "OTHER": "Outro"
+      },
+      "signatoryBadge": "Signatário autorizado",
+      "verificationStatus": {
+        "PENDING": "Verificação pendente",
+        "VERIFIED": "Verificado",
+        "REJECTED": "Rejeitado"
+      }
+    },
+    "beneficialOwners": {
+      "title": "Beneficiários efetivos",
+      "subtitle": "Indivíduos que detêm 25% ou mais da organização, ou que exercem controlo significativo.",
+      "add": "Adicionar beneficiário efetivo",
+      "fields": {
+        "firstName": "Nome próprio",
+        "lastName": "Apelido",
+        "dateOfBirth": "Data de nascimento",
+        "nationality": "Nacionalidade",
+        "residence": "País de residência",
+        "ownershipPercentage": "% de participação",
+        "controlType": "Tipo de controlo"
+      },
+      "controlTypes": {
+        "DIRECT": "Participação direta",
+        "INDIRECT": "Participação indireta",
+        "CONTROL": "Controlo sem participação",
+        "TRUST": "Beneficiário de trust",
+        "NOMINEE": "Nomeado"
+      },
+      "aggregate": {
+        "label": "Total de participação declarada",
+        "warningOver": "A participação declarada excede 100%.",
+        "belowThreshold": "O agregado está abaixo do limite de 25%. Terá de confirmar que nenhum indivíduo atinge esse limite."
+      },
+      "declaration": {
+        "title": "Declaração de beneficiários efetivos",
+        "body": "Confirmo que a informação sobre beneficiários efetivos é precisa e completa.",
+        "confirmNoOwners": "Confirmo que nenhum indivíduo atinge o limite de 25% de participação ou controlo.",
+        "submit": "Submeter declaração"
+      }
+    },
+    "submit": {
+      "title": "Submeter para revisão",
+      "confirmTitle": "Submeter a organização para revisão KYC?",
+      "confirmBody": "Após submissão não poderá editar os dados da organização. Pode continuar a ver o estado e adicionar evidências.",
+      "confirmSubmit": "Submeter agora",
+      "success": "Organização submetida. Revisaremos o seu processo KYC e responderemos no prazo de 3 dias úteis."
+    },
+    "withdraw": {
+      "title": "Retirar candidatura",
+      "confirmTitle": "Retirar esta candidatura?",
+      "confirmBody": "Pode retirar a sua organização da revisão. Pode resubmeter mais tarde.",
+      "reason": "Motivo (opcional)",
+      "confirmWithdraw": "Retirar",
+      "success": "Organização retirada."
+    }
+  },
+  "notifications": {
+    "center": {
+      "title": "Notificações",
+      "empty": "Está tudo em ordem.",
+      "markRead": "Marcar como lida",
+      "markAllRead": "Marcar todas como lidas",
+      "archive": "Arquivar",
+      "unreadOnly": "Apenas não lidas",
+      "all": "Todas"
+    },
+    "preferences": {
+      "title": "Preferências de notificação",
+      "subtitle": "Escolha como gostaria de receber as nossas comunicações.",
+      "channels": {
+        "EMAIL": "Email",
+        "SMS": "SMS",
+        "IN_APP": "Na aplicação"
+      },
+      "mandatoryNote": "As notificações críticas de segurança são sempre enviadas e não podem ser desativadas."
+    }
+  },
+  "account": {
+    "profile": {
+      "title": "Perfil",
+      "subtitle": "Gerir a sua informação pessoal.",
+      "fields": {
+        "firstName": "Nome próprio",
+        "lastName": "Apelido",
+        "email": "Endereço de email",
+        "phoneNumber": "Número de telefone",
+        "countryCode": "País",
+        "preferredLanguage": "Idioma preferido"
+      }
+    },
+    "security": {
+      "title": "Segurança",
+      "password": {
+        "title": "Palavra-passe",
+        "change": "Alterar palavra-passe",
+        "currentPassword": "Palavra-passe atual",
+        "newPassword": "Nova palavra-passe",
+        "confirmPassword": "Confirmar nova palavra-passe",
+        "success": "Palavra-passe atualizada."
+      },
+      "mfa": {
+        "title": "Autenticação de dois fatores",
+        "enable": "Ativar autenticação de dois fatores",
+        "disable": "Desativar autenticação de dois fatores",
+        "enabled": "Ativada",
+        "disabled": "Não ativada",
+        "setup": {
+          "title": "Configurar autenticação de dois fatores",
+          "subtitle": "Digitalize este código QR com a sua aplicação autenticadora (Google Authenticator, Authy, 1Password).",
+          "manualEntry": "Ou introduza este segredo manualmente:",
+          "next": "Seguinte: introduzir o código",
+          "verify": "Verificar código",
+          "recoveryCodes": {
+            "title": "Guarde os seus códigos de recuperação",
+            "subtitle": "Estes códigos são a única forma de aceder à sua conta se perder o autenticador. Guarde-os num local seguro.",
+            "acknowledged": "Guardei os meus códigos de recuperação"
+          }
+        },
+        "disableConfirm": "Desativar a autenticação de dois fatores enfraquece a segurança da conta. Confirme com o seu código TOTP atual.",
+        "regenerateRecovery": "Regenerar códigos de recuperação"
+      },
+      "sessions": {
+        "title": "Sessões",
+        "subtitle": "Dispositivos onde tem sessão iniciada.",
+        "current": "Este dispositivo",
+        "revoke": "Revogar",
+        "revokeAll": "Terminar sessão em todos",
+        "revokeAllConfirm": "Isto irá terminar sessão em todos os dispositivos. Terá de entrar novamente.",
+        "columns": {
+          "device": "Dispositivo",
+          "ip": "Endereço IP",
+          "lastActivity": "Última atividade",
+          "actions": "Ações"
+        }
+      }
+    }
+  },
+  "admin": {
+    "users": {
+      "title": "Utilizadores",
+      "search": "Pesquisar por nome, email ou telefone",
+      "columns": {
+        "name": "Nome",
+        "email": "Email",
+        "roles": "Funções",
+        "status": "Estado",
+        "created": "Criado"
+      },
+      "actions": {
+        "view": "Ver",
+        "suspend": "Suspender",
+        "reactivate": "Reativar",
+        "unlock": "Desbloquear",
+        "assignRoles": "Atribuir funções"
+      }
+    },
+    "countries": {
+      "title": "Países",
+      "add": "Adicionar país",
+      "columns": {
+        "name": "País",
+        "iso2": "ISO2",
+        "iso3": "ISO3",
+        "defaultCurrency": "Moeda",
+        "defaultLanguage": "Idioma",
+        "status": "Estado"
+      },
+      "status": {
+        "enabled": "Ativo",
+        "disabled": "Inativo"
+      },
+      "configuration": {
+        "title": "Configuração",
+        "versions": "Versões",
+        "publish": "Publicar nova versão",
+        "rollback": "Reverter",
+        "currentVersion": "Versão ativa",
+        "changeSummary": "Resumo da alteração"
+      }
+    },
+    "templates": {
+      "title": "Modelos de notificação",
+      "add": "Novo modelo",
+      "columns": {
+        "code": "Código",
+        "channel": "Canal",
+        "language": "Idioma",
+        "version": "Versão",
+        "status": "Estado",
+        "updated": "Atualizado"
+      },
+      "preview": "Pré-visualizar"
+    }
+  },
+  "errors": {
+    "network": "Não é possível contactar a TradeBridge. Verifique a sua ligação e tente novamente.",
+    "timeout": "O pedido demorou demasiado tempo. Tente novamente.",
+    "serverError": "Ocorreu um erro do nosso lado. Tente novamente.",
+    "unexpected": "Ocorreu um erro inesperado. Se persistir, contacte o suporte.",
+    "validation": "Verifique os campos destacados.",
+    "notFound": "Não encontrado.",
+    "forbidden": "Não tem permissão para essa ação.",
+    "sessionExpired": "A sua sessão expirou. Entre novamente.",
+    "validationCodes": {
+      "VALIDATION_ERROR": "Verifique os campos destacados.",
+      "CONFLICT": "Isto entra em conflito com dados existentes.",
+      "DUPLICATE_RESOURCE": "Isto já existe.",
+      "RESOURCE_NOT_FOUND": "O recurso não foi encontrado.",
+      "FORBIDDEN": "Não tem permissão para essa ação.",
+      "UNAUTHORIZED": "Inicie sessão para continuar.",
+      "TOKEN_EXPIRED": "A sua sessão expirou. Entre novamente.",
+      "RATE_LIMIT_EXCEEDED": "Demasiados pedidos. Aguarde e tente novamente.",
+      "SEPARATION_OF_DUTIES_VIOLATION": "Não pode decidir num processo em que é parte.",
+      "BUSINESS_RULE_VIOLATION": "Esta operação não é permitida neste momento."
+    }
+  },
+  "footer": {
+    "terms": "Termos de Serviço",
+    "privacy": "Política de Privacidade",
+    "contact": "Contactar suporte",
+    "copyright": "© {year} TradeBridge Africa. Todos os direitos reservados."
+  }
+}

@@ -1,0 +1,68 @@
+name: ui-ci
+
+on:
+  pull_request:
+    paths:
+      - 'ui/**'
+      - 'modules/tb-state/**'
+      - 'package.json'
+      - '.nvmrc'
+      - 'yarn.lock'
+      - '.github/workflows/ui-ci.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'ui/**'
+      - 'modules/tb-state/**'
+      - 'package.json'
+      - '.nvmrc'
+      - 'yarn.lock'
+      - '.github/workflows/ui-ci.yml'
+
+concurrency:
+  group: ui-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --network-timeout 600000
+
+      - name: Build tb-state
+        run: yarn workspace tb-state build
+
+      - name: Test tb-state
+        run: yarn workspace tb-state test --ci
+
+      - name: Lint UI
+        run: yarn workspace ui lint
+
+      - name: Test UI
+        run: yarn workspace ui test --ci --coverage --watchAll=false
+        env:
+          CI: true
+
+      - name: Build UI (production)
+        run: yarn workspace ui build
+        env:
+          BFF_URL: http://localhost:8080
+          APP_ENV: ci
+          ENABLE_FARO: 'false'
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-build-${{ github.sha }}
+          path: ui/build/
+          retention-days: 7

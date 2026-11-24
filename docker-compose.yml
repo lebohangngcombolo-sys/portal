@@ -1,0 +1,68 @@
+version: "3.9"
+
+name: tradebridge-frontend
+
+# ============================================================
+# Local development stack
+#
+#   UI dev server  → http://localhost:3000
+#   API gateway    → http://localhost:8080
+#
+# The UI proxies /api/** to the gateway (configured in ui/webpack.config.js).
+# Assumes the tradebridge-africa backend is running and reachable on
+# the shared `tradebridge-africa_tradebridge` docker network, OR that
+# the gateway is exposed on :8080 on the host.
+#
+# Two modes:
+#   A. Backend gateway runs on host :8080 → use this compose as-is
+#   B. Backend runs in docker-compose → attach to its network
+# ============================================================
+
+services:
+  # ---------- Shared state library builder (one-shot) ----------
+  tb-state-build:
+    image: node:20-alpine
+    working_dir: /app
+    command: >
+      sh -c "
+        yarn install --frozen-lockfile --network-timeout 600000 &&
+        yarn workspace tb-state build
+      "
+    volumes:
+      - ./:/app
+      - /app/node_modules
+      - /app/ui/node_modules
+      - /app/modules/tb-state/lib
+    environment:
+      NODE_ENV: development
+
+  # ---------- UI dev server ----------
+  ui:
+    image: node:20-alpine
+    working_dir: /app
+    depends_on:
+      tb-state-build:
+        condition: service_completed_successfully
+    command: yarn workspace ui start
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+      - /app/ui/node_modules
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+      BFF_URL: ${BFF_URL:-http://host.docker.internal:8080}
+      ENABLE_FARO: ${ENABLE_FARO:-false}
+      FARO_URL: ${FARO_URL:-}
+      DEFAULT_LOCALE: ${DEFAULT_LOCALE:-en}
+      STATIC_BASE_URL: ${STATIC_BASE_URL:-}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - tradebridge-frontend
+
+networks:
+  tradebridge-frontend:
+    driver: bridge

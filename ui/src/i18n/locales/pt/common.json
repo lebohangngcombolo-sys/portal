@@ -1,0 +1,338 @@
+{
+  "app": {
+    "name": "TradeBridge Africa",
+    "tagline": "Onboarding de comércio para empresas africanas"
+  },
+  "common": {
+    "yes": "Sim",
+    "no": "Não",
+    "ok": "OK",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "saving": "A guardar…",
+    "submit": "Submeter",
+    "submitting": "A submeter…",
+    "continue": "Continuar",
+    "back": "Voltar",
+    "next": "Seguinte",
+    "close": "Fechar",
+    "confirm": "Confirmar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "remove": "Remover",
+    "add": "Adicionar",
+    "search": "Pesquisar",
+    "filter": "Filtrar",
+    "clear": "Limpar",
+    "loading": "A carregar…",
+    "error": "Ocorreu um erro",
+    "retry": "Tentar novamente",
+    "logout": "Terminar sessão",
+    "signIn": "Entrar",
+    "signUp": "Registar",
+    "all": "Todos",
+    "view": "Ver",
+    "default": "Padrão",
+    "enable": "Ativar",
+    "disable": "Desativar",
+    "friend": "amigo",
+    "verified": "Verificado",
+    "unverified": "Não verificado",
+    "unknown": "Desconhecido"
+  },
+  "navigation": {
+    "dashboard": "Painel",
+    "organizations": "Organizações",
+    "kycCases": "Processos KYC",
+    "notifications": "Notificações",
+    "profile": "Perfil",
+    "security": "Segurança",
+    "preferences": "Preferências",
+    "sessions": "Sessões",
+    "admin": "Administração",
+    "users": "Utilizadores",
+    "roles": "Funções",
+    "permissions": "Permissões",
+    "countries": "Países",
+    "templates": "Modelos de notificação",
+    "deliveries": "Entregas",
+    "help": "Ajuda",
+    "support": "Suporte"
+  },
+  "landing": {
+    "heroSubtitle": "Onboarding rápido e conforme para empresas em toda a África. Faça KYC uma vez. Negocie com confiança.",
+    "features": {
+      "kyc": {
+        "title": "KYC conforme",
+        "body": "Cumpra os requisitos da FICA, do RGPD e das jurisdições num fluxo de trabalho auditável."
+      },
+      "security": {
+        "title": "Segurança bancária",
+        "body": "Autenticação de dois fatores, gestão de sessões e APIs com limite de taxa."
+      },
+      "scale": {
+        "title": "Feito para escalar",
+        "body": "Multi-país, multi-moeda e sensível a funções desde o primeiro dia."
+      }
+    }
+  },
+  "dashboard": {
+    "welcome": "Bem-vindo de volta, {{firstName}}",
+    "subtitle": "Aqui está o que se passa com a sua conta.",
+    "kycStatus": "Estado KYC",
+    "profileStatus": "Preenchimento do perfil",
+    "recentActivity": "Atividade recente",
+    "quickActions": "Ações rápidas",
+    "startOnboarding": "Iniciar onboarding",
+    "viewKyc": "Ver processo KYC",
+    "noActivity": "Sem atividade recente.",
+    "unreadNotifications": "{{count}} notificação(ões) por ler",
+    "verifyEmailHint": "O seu email ainda não está verificado. Consulte a sua caixa de entrada para continuar.",
+    "completeProfileHint": "Complete o seu perfil para desbloquear o onboarding.",
+    "noAssignedCases": "Sem processos atribuídos neste momento."
+  },
+  "notifications": {
+    "center": {
+      "title": "Notificações",
+      "empty": "Está tudo em ordem.",
+      "markRead": "Marcar como lida",
+      "markAllRead": "Marcar todas como lidas",
+      "archive": "Arquivar",
+      "unreadOnly": "Apenas não lidas",
+      "all": "Todas",
+      "unread": "Nova",
+      "noSubject": "(Sem assunto)"
+    },
+    "preferences": {
+      "title": "Preferências de notificação",
+      "subtitle": "Escolha como gostaria de receber as nossas comunicações.",
+      "channels": {
+        "EMAIL": "Email",
+        "SMS": "SMS",
+        "IN_APP": "Na aplicação"
+      },
+      "mandatory": "Obrigatório",
+      "mandatoryNote": "As notificações críticas de segurança são sempre enviadas e não podem ser desativadas."
+    }
+  },
+  "organization": {
+    "list": {
+      "title": "Organizações",
+      "createOne": "Adicionar organização",
+      "view": "Ver organização",
+      "empty": "Ainda não adicionou nenhuma organização.",
+      "loadError": "Não foi possível carregar as suas organizações. Tente novamente.",
+      "columns": {
+        "name": "Nome legal",
+        "type": "Tipo de organização",
+        "registration": "Número de registo",
+        "status": "Estado",
+        "updated": "Última atualização"
+      }
+    },
+    "create": {
+      "title": "Dados da organização",
+      "subtitle": "Conte-nos sobre a sua empresa.",
+      "success": "Organização criada",
+      "sections": {
+        "basic": "Informação básica",
+        "registration": "Registo",
+        "contact": "Morada da empresa",
+        "address": "Morada da empresa"
+      },
+      "fields": {
+        "legalName": "Nome legal",
+        "tradingName": "Nome comercial",
+        "organizationType": "Tipo de organização",
+        "registrationNumber": "Número de registo",
+        "taxNumber": "Número fiscal",
+        "incorporationDate": "Data de constituição",
+        "registrationAuthority": "Autoridade de registo",
+        "businessDescription": "Descrição da atividade",
+        "website": "Website",
+        "addressType": "Tipo de morada",
+        "addressLine1": "Morada, linha 1",
+        "addressLine2": "Morada, linha 2",
+        "city": "Localidade",
+        "region": "Distrito ou região",
+        "postalCode": "Código postal",
+        "country": "País"
+      },
+      "organizationTypes": {
+        "COMPANY": "Sociedade",
+        "SOLE_PROPRIETOR": "Empresário em nome individual",
+        "PARTNERSHIP": "Sociedade de pessoas",
+        "NONPROFIT": "Organização sem fins lucrativos",
+        "OTHER": "Outro"
+      }
+    },
+    "edit": {
+      "notAllowed": "Esta organização não pode ser editada no estado atual."
+    },
+    "representatives": {
+      "title": "Representantes",
+      "add": "Adicionar representante",
+      "removeTitle": "Remover representante?",
+      "removeBody": "Tem a certeza de que pretende remover este representante?",
+      "firstName": "Nome próprio",
+      "lastName": "Apelido",
+      "email": "Endereço de email",
+      "phoneNumber": "Número de telefone",
+      "signatoryLabel": "Representante autorizado",
+      "types": {
+        "selectLabel": "Tipo de representante",
+        "DIRECTOR": "Administrador",
+        "OFFICER": "Dirigente",
+        "SHAREHOLDER": "Acionista",
+        "SIGNATORY": "Representante autorizado",
+        "OTHER": "Outro"
+      }
+    },
+    "beneficialOwners": {
+      "title": "Beneficiários efetivos",
+      "add": "Adicionar beneficiário efetivo",
+      "removeTitle": "Remover beneficiário efetivo?",
+      "removeBody": "Tem a certeza de que pretende remover este beneficiário efetivo?",
+      "fields": {
+        "firstName": "Nome próprio",
+        "lastName": "Apelido",
+        "dateOfBirth": "Data de nascimento",
+        "nationality": "Nacionalidade",
+        "residence": "País de residência",
+        "ownershipPercentage": "Percentagem de participação",
+        "controlType": "Tipo de controlo",
+        "identityReference": "Número do documento de identificação"
+      },
+      "controlTypes": {
+        "DIRECT": "Propriedade direta",
+        "INDIRECT": "Propriedade indireta",
+        "CONTROL": "Outro tipo de controlo",
+        "TRUST": "Fideicomisso",
+        "NOMINEE": "Mandatário"
+      },
+      "aggregate": {
+        "belowThreshold": "A participação declarada está abaixo do limite de declaração."
+      },
+      "declaration": {
+        "title": "Declaração de propriedade",
+        "submitted": "Declaração de propriedade submetida",
+        "subtitle": "Declare os beneficiários efetivos que, em última instância, detêm ou controlam esta organização.",
+        "body": "Descreva a estrutura de propriedade da organização.",
+        "confirmNoOwners": "Confirmo que não existem beneficiários efetivos a declarar.",
+        "submit": "Submeter declaração"
+      }
+    },
+    "submit": {
+      "title": "Submeter organização",
+      "success": "Organização submetida para análise",
+      "confirmTitle": "Confirmar submissão",
+      "confirmBody": "Confirme se os dados e documentos da organização estão completos antes de submeter.",
+      "confirmSubmit": "Submeter para análise"
+    },
+    "withdraw": {
+      "title": "Retirar submissão",
+      "success": "Submissão retirada",
+      "confirmBody": "Ao retirar a submissão, a organização regressará ao estado de rascunho.",
+      "reason": "Motivo da retirada",
+      "confirmWithdraw": "Retirar submissão"
+    }
+  },
+  "account": {
+    "profile": {
+      "title": "Perfil",
+      "subtitle": "Gerir a sua informação pessoal.",
+      "fields": {
+        "firstName": "Nome próprio",
+        "lastName": "Apelido",
+        "email": "Endereço de email",
+        "phoneNumber": "Número de telefone",
+        "countryCode": "País",
+        "preferredLanguage": "Idioma preferido"
+      },
+      "customerProfile": "Perfil de cliente",
+      "customerNumber": "Número de cliente",
+      "status": "Estado"
+    },
+    "security": {
+      "title": "Segurança",
+      "subtitle": "Faça a gestão da palavra-passe, da autenticação de dois fatores e dos dispositivos com sessão iniciada.",
+      "password": {
+        "title": "Palavra-passe",
+        "description": "Utilize uma palavra-passe forte e exclusiva para proteger a sua conta.",
+        "change": "Alterar palavra-passe",
+        "currentPassword": "Palavra-passe atual",
+        "newPassword": "Nova palavra-passe",
+        "confirmPassword": "Confirmar nova palavra-passe",
+        "success": "Palavra-passe atualizada."
+      },
+      "mfa": {
+        "title": "Autenticação de dois fatores",
+        "description": "Adicione uma camada extra de proteção exigindo um código autenticador ao iniciar sessão.",
+        "status": "Estado",
+        "statusUnknown": "Indisponível",
+        "statusUnavailable": "Não foi possível carregar o estado da autenticação de dois fatores.",
+        "enable": "Ativar autenticação de dois fatores",
+        "disable": "Desativar autenticação de dois fatores",
+        "enabled": "Ativada",
+        "disabled": "Não ativada",
+        "disabledSuccess": "MFA desativada",
+        "setup": {
+          "title": "Configurar autenticação de dois fatores",
+          "subtitle": "Digitalize este código QR com a sua aplicação autenticadora (Google Authenticator, Authy, 1Password).",
+          "manualEntry": "Ou introduza este segredo manualmente:",
+          "next": "Seguinte: introduzir o código",
+          "verify": "Verificar código",
+          "complete": "MFA ativada",
+          "reauth": "Confirme a sua palavra-passe",
+          "recoveryCodes": {
+            "title": "Guarde os seus códigos de recuperação",
+            "subtitle": "Estes códigos são a única forma de aceder à sua conta se perder o autenticador. Guarde-os num local seguro.",
+            "acknowledged": "Guardei os meus códigos de recuperação",
+            "download": "Descarregar códigos"
+          }
+        },
+        "disableConfirm": "Desativar a autenticação de dois fatores enfraquece a segurança da conta. Confirme com o seu código TOTP atual.",
+        "regenerateRecovery": "Regenerar códigos de recuperação"
+      },
+      "sessions": {
+        "title": "Sessões",
+        "subtitle": "Dispositivos onde tem sessão iniciada.",
+        "manage": "Gerir sessões",
+        "current": "Este dispositivo",
+        "revoke": "Revogar",
+        "revokeAll": "Terminar sessão em todos",
+        "revokeAllConfirm": "Isto irá terminar sessão em todos os dispositivos. Terá de entrar novamente.",
+        "empty": "Nenhuma sessão ativa.",
+        "unknownDevice": "Dispositivo desconhecido",
+        "cannotRevokeCurrent": "Não é possível revogar a sessão atual",
+        "revoked": "Sessão revogada",
+        "revokedAll": "Todas as sessões terminaram",
+        "columns": {
+          "device": "Dispositivo",
+          "ip": "Endereço IP",
+          "lastActivity": "Última atividade",
+          "actions": "Ações"
+        }
+      }
+    }
+  },
+  "password": {
+    "strength": {
+      "0": "Muito fraca",
+      "1": "Fraca",
+      "2": "Razoável",
+      "3": "Forte",
+      "4": "Muito forte"
+    }
+  },
+  "maintenance": {
+    "title": "Manutenção programada",
+    "body": "A TradeBridge Africa está em manutenção programada. Tente novamente dentro de instantes."
+  },
+  "footer": {
+    "terms": "Termos de Serviço",
+    "privacy": "Política de Privacidade",
+    "contact": "Contactar suporte",
+    "copyright": "© {{year}} TradeBridge Africa. Todos os direitos reservados."
+  }
+}

@@ -1,0 +1,453 @@
+{
+  "_meta": {
+    "language": "en",
+    "name": "English",
+    "nativeName": "English",
+    "version": 1,
+    "generatedAt": "2026-11-11T00:00:00Z"
+  },
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "cancel": "Cancel",
+    "save": "Save",
+    "saving": "Saving…",
+    "submit": "Submit",
+    "submitting": "Submitting…",
+    "continue": "Continue",
+    "back": "Back",
+    "next": "Next",
+    "close": "Close",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "remove": "Remove",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "clear": "Clear",
+    "loading": "Loading…",
+    "error": "Something went wrong",
+    "retry": "Retry",
+    "logout": "Log out",
+    "signIn": "Sign in",
+    "signUp": "Sign up"
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in to TradeBridge Africa",
+      "emailLabel": "Email or phone number",
+      "passwordLabel": "Password",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign in",
+      "noAccount": "Don't have an account?",
+      "createOne": "Create one",
+      "invalidCredentials": "Email/phone or password is incorrect.",
+      "accountLocked": "Your account is temporarily locked. Try again in 15 minutes.",
+      "accountSuspended": "This account is suspended. Contact support."
+    },
+    "register": {
+      "title": "Create your TradeBridge Africa account",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "phoneNumber": "Phone number (with country code)",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "country": "Country of residence",
+      "language": "Preferred language",
+      "acceptTerms": "I accept the Terms of Service and Privacy Policy",
+      "submit": "Create account",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "passwordHint": "At least 12 characters with upper, lower, digit, and symbol.",
+      "emailInUse": "An account with this email already exists.",
+      "phoneInUse": "An account with this phone number already exists."
+    },
+    "verifyEmail": {
+      "title": "Verify your email",
+      "subtitle": "Enter the 6-digit code we sent to {email}.",
+      "codeLabel": "Verification code",
+      "submit": "Verify",
+      "resend": "Resend code",
+      "resent": "A new code has been sent. Check your inbox.",
+      "expired": "This code has expired. Request a new one.",
+      "invalid": "The code is incorrect. Try again."
+    },
+    "forgotPassword": {
+      "title": "Reset your password",
+      "subtitle": "Enter the email associated with your account. If it exists, we'll send a reset code.",
+      "submit": "Send reset code",
+      "sent": "If the account exists, you'll receive a reset code shortly."
+    },
+    "resetPassword": {
+      "title": "Set a new password",
+      "codeLabel": "Reset code",
+      "newPassword": "New password",
+      "confirmPassword": "Confirm new password",
+      "submit": "Update password",
+      "success": "Password updated. You can now sign in."
+    },
+    "mfa": {
+      "challengeTitle": "Two-factor authentication",
+      "challengeSubtitle": "Enter the 6-digit code from your authenticator app.",
+      "codeLabel": "Authentication code",
+      "verify": "Verify",
+      "backupCode": "Use a backup code",
+      "invalid": "The code is incorrect. Try again.",
+      "expired": "This challenge has expired. Sign in again."
+    }
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "organizations": "Organizations",
+    "kycCases": "KYC Cases",
+    "notifications": "Notifications",
+    "profile": "Profile",
+    "security": "Security",
+    "preferences": "Preferences",
+    "sessions": "Sessions",
+    "admin": "Administration",
+    "users": "Users",
+    "roles": "Roles",
+    "permissions": "Permissions",
+    "countries": "Countries",
+    "templates": "Notification Templates",
+    "deliveries": "Deliveries",
+    "help": "Help",
+    "support": "Support"
+  },
+  "dashboard": {
+    "welcome": "Welcome back, {firstName}",
+    "subtitle": "Here's what's happening with your account.",
+    "kycStatus": "KYC status",
+    "profileStatus": "Profile completion",
+    "recentActivity": "Recent activity",
+    "quickActions": "Quick actions",
+    "startOnboarding": "Start onboarding",
+    "viewKyc": "View KYC case",
+    "noActivity": "No recent activity.",
+    "unreadNotifications": "{count} unread notification(s)"
+  },
+  "kyc": {
+    "statuses": {
+      "DRAFT": "Draft",
+      "SUBMITTED": "Submitted",
+      "IN_REVIEW": "In review",
+      "INFORMATION_REQUESTED": "Information requested",
+      "RESUBMITTED": "Resubmitted",
+      "APPROVED": "Approved",
+      "REJECTED": "Rejected"
+    },
+    "organizationStatuses": {
+      "DRAFT": "Draft",
+      "PENDING_REVIEW": "Pending review",
+      "APPROVED": "Approved",
+      "REJECTED": "Rejected",
+      "WITHDRAWN": "Withdrawn"
+    },
+    "caseType": {
+      "ONBOARDING": "Onboarding",
+      "PERIODIC_REVIEW": "Periodic review",
+      "ENHANCED_DUE_DILIGENCE": "Enhanced due diligence"
+    },
+    "riskLevels": {
+      "LOW": "Low",
+      "MEDIUM": "Medium",
+      "HIGH": "High",
+      "CRITICAL": "Critical"
+    },
+    "requirements": {
+      "DIRECTOR_ID_COPY": "Certified copy of director ID",
+      "COMPANY_REGISTRATION_CERT": "Company registration certificate",
+      "CERTIDAO_PERMANENTE": "Certidão Permanente",
+      "PROOF_OF_ADDRESS": "Proof of business address (last 3 months)",
+      "PASSPORT_COPY": "Copy of passport bio page"
+    },
+    "actions": {
+      "startCase": "Start a new KYC case",
+      "assignReviewer": "Assign reviewer",
+      "requestInformation": "Request more information",
+      "resubmit": "Resubmit",
+      "approve": "Approve",
+      "reject": "Reject"
+    },
+    "decisions": {
+      "APPROVED": "Approved",
+      "REJECTED": "Rejected"
+    }
+  },
+  "organization": {
+    "list": {
+      "title": "Organizations",
+      "empty": "You don't have any organizations yet.",
+      "createOne": "Create your first organization",
+      "columns": {
+        "name": "Organization",
+        "type": "Type",
+        "registration": "Registration",
+        "status": "Status",
+        "updated": "Last updated"
+      }
+    },
+    "create": {
+      "title": "Create organization",
+      "subtitle": "Provide your business details. You can save a draft and come back anytime.",
+      "sections": {
+        "basic": "Basic details",
+        "registration": "Registration details",
+        "contact": "Contact details"
+      },
+      "fields": {
+        "legalName": "Legal name",
+        "tradingName": "Trading name",
+        "organizationType": "Organization type",
+        "registrationNumber": "Registration number",
+        "taxNumber": "Tax / VAT number",
+        "incorporationDate": "Incorporation date",
+        "registrationAuthority": "Registration authority",
+        "businessDescription": "Business description",
+        "website": "Website"
+      },
+      "organizationTypes": {
+        "COMPANY": "Company",
+        "SOLE_PROPRIETOR": "Sole proprietor",
+        "PARTNERSHIP": "Partnership",
+        "NONPROFIT": "Non-profit",
+        "OTHER": "Other"
+      }
+    },
+    "representatives": {
+      "title": "Representatives",
+      "subtitle": "Add directors, officers, and other signatories.",
+      "add": "Add representative",
+      "types": {
+        "DIRECTOR": "Director",
+        "OFFICER": "Officer",
+        "SHAREHOLDER": "Shareholder",
+        "SIGNATORY": "Signatory",
+        "OTHER": "Other"
+      },
+      "signatoryBadge": "Authorized signatory",
+      "verificationStatus": {
+        "PENDING": "Verification pending",
+        "VERIFIED": "Verified",
+        "REJECTED": "Rejected"
+      }
+    },
+    "beneficialOwners": {
+      "title": "Beneficial owners",
+      "subtitle": "Individuals who own 25% or more of the organization, or exercise significant control.",
+      "add": "Add beneficial owner",
+      "fields": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "dateOfBirth": "Date of birth",
+        "nationality": "Nationality",
+        "residence": "Country of residence",
+        "ownershipPercentage": "Ownership %",
+        "controlType": "Control type"
+      },
+      "controlTypes": {
+        "DIRECT": "Direct ownership",
+        "INDIRECT": "Indirect ownership",
+        "CONTROL": "Control without ownership",
+        "TRUST": "Trust beneficiary",
+        "NOMINEE": "Nominee"
+      },
+      "aggregate": {
+        "label": "Total declared ownership",
+        "warningOver": "Declared ownership exceeds 100%.",
+        "belowThreshold": "Aggregate is below the 25% threshold. You'll need to confirm that no individual meets the threshold."
+      },
+      "declaration": {
+        "title": "Ownership declaration",
+        "body": "I confirm that the beneficial ownership information provided is accurate and complete.",
+        "confirmNoOwners": "I confirm that no individual meets the 25% ownership or control threshold.",
+        "submit": "Submit declaration"
+      }
+    },
+    "submit": {
+      "title": "Submit for review",
+      "confirmTitle": "Submit organization for KYC review?",
+      "confirmBody": "Once submitted you won't be able to edit the organization details. You can still view the status and add evidence.",
+      "confirmSubmit": "Submit now",
+      "success": "Organization submitted. We'll review your KYC case and get back to you within 3 business days."
+    },
+    "withdraw": {
+      "title": "Withdraw application",
+      "confirmTitle": "Withdraw this application?",
+      "confirmBody": "You can withdraw your organization from review. You may resubmit later.",
+      "reason": "Reason (optional)",
+      "confirmWithdraw": "Withdraw",
+      "success": "Organization withdrawn."
+    }
+  },
+  "notifications": {
+    "center": {
+      "title": "Notifications",
+      "empty": "You're all caught up.",
+      "markRead": "Mark as read",
+      "markAllRead": "Mark all as read",
+      "archive": "Archive",
+      "unreadOnly": "Unread only",
+      "all": "All"
+    },
+    "preferences": {
+      "title": "Notification preferences",
+      "subtitle": "Choose how you'd like to hear from us.",
+      "channels": {
+        "EMAIL": "Email",
+        "SMS": "SMS",
+        "IN_APP": "In-app"
+      },
+      "mandatoryNote": "Security-critical notifications are always sent and cannot be disabled."
+    }
+  },
+  "account": {
+    "profile": {
+      "title": "Profile",
+      "subtitle": "Manage your personal information.",
+      "fields": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email address",
+        "phoneNumber": "Phone number",
+        "countryCode": "Country",
+        "preferredLanguage": "Preferred language"
+      }
+    },
+    "security": {
+      "title": "Security",
+      "password": {
+        "title": "Password",
+        "change": "Change password",
+        "currentPassword": "Current password",
+        "newPassword": "New password",
+        "confirmPassword": "Confirm new password",
+        "success": "Password updated."
+      },
+      "mfa": {
+        "title": "Two-factor authentication",
+        "enable": "Enable two-factor authentication",
+        "disable": "Disable two-factor authentication",
+        "enabled": "Enabled",
+        "disabled": "Not enabled",
+        "setup": {
+          "title": "Set up two-factor authentication",
+          "subtitle": "Scan this QR code with your authenticator app (Google Authenticator, Authy, 1Password).",
+          "manualEntry": "Or enter this secret manually:",
+          "next": "Next: enter the code",
+          "verify": "Verify code",
+          "recoveryCodes": {
+            "title": "Save your recovery codes",
+            "subtitle": "These codes are the only way to access your account if you lose your authenticator. Store them somewhere safe.",
+            "acknowledged": "I've saved my recovery codes"
+          }
+        },
+        "disableConfirm": "Disabling two-factor authentication weakens your account security. Confirm with your current TOTP code.",
+        "regenerateRecovery": "Regenerate recovery codes"
+      },
+      "sessions": {
+        "title": "Sessions",
+        "subtitle": "Devices where you're currently signed in.",
+        "current": "This device",
+        "revoke": "Revoke",
+        "revokeAll": "Sign out everywhere",
+        "revokeAllConfirm": "This will sign you out of all devices. You'll need to sign in again.",
+        "columns": {
+          "device": "Device",
+          "ip": "IP address",
+          "lastActivity": "Last active",
+          "actions": "Actions"
+        }
+      }
+    }
+  },
+  "admin": {
+    "users": {
+      "title": "Users",
+      "search": "Search by name, email, or phone",
+      "columns": {
+        "name": "Name",
+        "email": "Email",
+        "roles": "Roles",
+        "status": "Status",
+        "created": "Created"
+      },
+      "actions": {
+        "view": "View",
+        "suspend": "Suspend",
+        "reactivate": "Reactivate",
+        "unlock": "Unlock",
+        "assignRoles": "Assign roles"
+      }
+    },
+    "countries": {
+      "title": "Countries",
+      "add": "Add country",
+      "columns": {
+        "name": "Country",
+        "iso2": "ISO2",
+        "iso3": "ISO3",
+        "defaultCurrency": "Currency",
+        "defaultLanguage": "Language",
+        "status": "Status"
+      },
+      "status": {
+        "enabled": "Enabled",
+        "disabled": "Disabled"
+      },
+      "configuration": {
+        "title": "Configuration",
+        "versions": "Versions",
+        "publish": "Publish new version",
+        "rollback": "Roll back",
+        "currentVersion": "Active version",
+        "changeSummary": "Change summary"
+      }
+    },
+    "templates": {
+      "title": "Notification templates",
+      "add": "New template",
+      "columns": {
+        "code": "Code",
+        "channel": "Channel",
+        "language": "Language",
+        "version": "Version",
+        "status": "Status",
+        "updated": "Updated"
+      },
+      "preview": "Preview"
+    }
+  },
+  "errors": {
+    "network": "Can't reach TradeBridge. Check your connection and try again.",
+    "timeout": "The request took too long. Please try again.",
+    "serverError": "Something went wrong on our side. Please try again.",
+    "unexpected": "An unexpected error occurred. If this keeps happening, contact support.",
+    "validation": "Please check the highlighted fields.",
+    "notFound": "Not found.",
+    "forbidden": "You don't have permission to do that.",
+    "sessionExpired": "Your session has expired. Please sign in again.",
+    "validationCodes": {
+      "VALIDATION_ERROR": "Please check the highlighted fields.",
+      "CONFLICT": "This conflicts with existing data.",
+      "DUPLICATE_RESOURCE": "This already exists.",
+      "RESOURCE_NOT_FOUND": "The resource could not be found.",
+      "FORBIDDEN": "You don't have permission to do that.",
+      "UNAUTHORIZED": "Please sign in to continue.",
+      "TOKEN_EXPIRED": "Your session has expired. Please sign in again.",
+      "RATE_LIMIT_EXCEEDED": "Too many requests. Please wait and try again.",
+      "SEPARATION_OF_DUTIES_VIOLATION": "You can't decide on a case where you are a party.",
+      "BUSINESS_RULE_VIOLATION": "This operation isn't allowed right now."
+    }
+  },
+  "footer": {
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "contact": "Contact support",
+    "copyright": "© {year} TradeBridge Africa. All rights reserved."
+  }
+}

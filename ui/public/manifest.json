@@ -1,0 +1,23 @@
+{
+  "short_name": "TradeBridge",
+  "name": "TradeBridge Africa",
+  "description": "Trade finance onboarding and KYC platform for African businesses",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0B5FFF",
+  "background_color": "#F7F8FA",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["business", "finance"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/assets/logos/tradebridge-africa-logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ]
+}

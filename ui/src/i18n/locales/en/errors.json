@@ -1,0 +1,25 @@
+{
+  "network": "Can't reach TradeBridge. Check your connection and try again.",
+  "timeout": "The request took too long. Please try again.",
+  "serverError": "Something went wrong on our side. Please try again.",
+  "unexpected": "An unexpected error occurred. If this keeps happening, contact support.",
+  "validation": "Please check the highlighted fields.",
+  "notFound": "Not found.",
+  "forbidden": "You don't have permission to do that.",
+  "sessionExpired": "Your session has expired. Please sign in again.",
+  "malformedJson": "The submitted JSON is not valid.",
+  "validationCodes": {
+    "VALIDATION_ERROR": "Please check the highlighted fields.",
+    "CONFLICT": "This conflicts with existing data.",
+    "DUPLICATE_RESOURCE": "This already exists.",
+    "RESOURCE_NOT_FOUND": "The resource could not be found.",
+    "FORBIDDEN": "You don't have permission to do that.",
+    "UNAUTHORIZED": "Please sign in to continue.",
+    "TOKEN_EXPIRED": "Your session has expired. Please sign in again.",
+    "RATE_LIMIT_EXCEEDED": "Too many requests. Please wait and try again.",
+    "SEPARATION_OF_DUTIES_VIOLATION": "You can't decide on a case where you are a party.",
+    "BUSINESS_RULE_VIOLATION": "This operation isn't allowed right now.",
+    "NETWORK_ERROR": "Network error. Please check your connection.",
+    "TIMEOUT": "The request took too long."
+  }
+}

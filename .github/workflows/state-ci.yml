@@ -1,0 +1,88 @@
+name: state-ci
+
+on:
+  pull_request:
+    paths:
+      - 'modules/tb-state/**'
+      - '.github/workflows/state-ci.yml'
+      - '.nvmrc'
+  push:
+    branches: [main]
+    tags: ['tb-state-v*']
+    paths:
+      - 'modules/tb-state/**'
+      - '.github/workflows/state-ci.yml'
+      - '.nvmrc'
+
+concurrency:
+  group: state-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --network-timeout 600000
+
+      - name: Test tb-state
+        run: yarn workspace tb-state test --ci
+
+      - name: Build tb-state
+        run: yarn workspace tb-state build
+
+      - name: Verify build output exists
+        run: |
+          test -f modules/tb-state/lib/index.js
+          echo "Build output: $(wc -c < modules/tb-state/lib/index.js) bytes"
+
+      - name: Pack tarball
+        run: yarn workspace tb-state pack --filename=tb-state.tgz
+        continue-on-error: false
+
+      - name: Upload tarball artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: tb-state-tarball-${{ github.sha }}
+          path: modules/tb-state/tb-state.tgz
+          retention-days: 14
+
+  publish:
+    if: startsWith(github.ref, 'refs/tags/tb-state-v')
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@tradebridge'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --network-timeout 600000
+
+      - name: Build
+        run: yarn workspace tb-state build
+
+      - name: Publish to GitHub Packages
+        run: yarn workspace tb-state publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

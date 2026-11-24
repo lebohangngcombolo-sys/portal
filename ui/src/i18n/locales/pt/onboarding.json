@@ -1,0 +1,21 @@
+{
+  "steps": {
+    "personal": "Dados pessoais",
+    "contact": "Dados de contacto",
+    "review": "Revisão",
+    "basic": "Dados básicos",
+    "registration": "Registo",
+    "address": "Morada",
+    "representatives": "Representantes",
+    "beneficialOwners": "Beneficiários efetivos",
+    "declaration": "Declaração"
+  },
+  "welcome": {
+    "title": "Bem-vindo à TradeBridge Africa",
+    "subtitle": "Vamos configurar a sua conta. Demora cerca de 5 minutos."
+  },
+  "complete": {
+    "title": "Está tudo pronto",
+    "subtitle": "A sua informação foi submetida. Entraremos em contacto brevemente."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "tradebridge-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "TradeBridge Africa — React SPA and shared frontend workspaces",
+  "engines": {
+    "node": ">=20.0.0 <25.0.0",
+    "yarn": ">=1.22.0"
+  },
+  "workspaces": [
+    "modules/tb-state",
+    "ui"
+  ],
+  "scripts": {
+    "postinstall": "yarn workspace tb-state build",
+    "test:all": "yarn workspace tb-state test && yarn workspace ui test",
+    "build:all": "yarn workspace tb-state build && yarn workspace ui build",
+    "lint:all": "yarn workspace ui lint",
+    "format:all": "yarn workspace ui format",
+    "clean": "rimraf modules/tb-state/lib ui/build coverage node_modules"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.10"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "statuses": {
+    "DRAFT": "Rascunho",
+    "SUBMITTED": "Submetido",
+    "IN_REVIEW": "Em revisão",
+    "INFORMATION_REQUESTED": "Informação solicitada",
+    "RESUBMITTED": "Resubmetido",
+    "APPROVED": "Aprovado",
+    "REJECTED": "Rejeitado"
+  },
+  "organizationStatuses": {
+    "DRAFT": "Rascunho",
+    "PENDING_REVIEW": "Aguarda revisão",
+    "APPROVED": "Aprovado",
+    "REJECTED": "Rejeitado",
+    "WITHDRAWN": "Retirado"
+  },
+  "caseType": {
+    "ONBOARDING": "Onboarding",
+    "PERIODIC_REVIEW": "Revisão periódica",
+    "ENHANCED_DUE_DILIGENCE": "Diligência reforçada"
+  },
+  "riskLevels": {
+    "LOW": "Baixo",
+    "MEDIUM": "Médio",
+    "HIGH": "Alto",
+    "CRITICAL": "Crítico"
+  },
+  "requirements": {
+    "DIRECTOR_ID_COPY": "Cópia autenticada do documento do administrador",
+    "COMPANY_REGISTRATION_CERT": "Certidão de registo da empresa",
+    "CERTIDAO_PERMANENTE": "Certidão Permanente",
+    "PROOF_OF_ADDRESS": "Comprovativo de morada da empresa (últimos 3 meses)",
+    "PASSPORT_COPY": "Cópia da página de identificação do passaporte",
+    "empty": "Sem requisitos definidos.",
+    "fileTypes": "Permitido: {{types}}"
+  },
+  "actions": {
+    "startCase": "Iniciar novo processo KYC",
+    "assignReviewer": "Atribuir revisor",
+    "requestInformation": "Solicitar mais informação",
+    "resubmit": "Resubmeter",
+    "review": "Rever",
+    "decide": "Decidir",
+    "approve": "Aprovar",
+    "reject": "Rejeitar"
+  },
+  "decisions": {
+    "APPROVED": "Aprovado",
+    "REJECTED": "Rejeitado",
+    "empty": "Sem decisões registadas.",
+    "title": "Decisões"
+  },
+  "filters": {
+    "status": "Estado",
+    "assignedToMe": "Atribuídos a mim"
+  },
+  "columns": {
+    "caseNumber": "Processo",
+    "type": "Tipo",
+    "risk": "Risco",
+    "status": "Estado",
+    "submitted": "Submetido",
+    "assignedReviewer": "Revisor atribuído",
+    "configVersion": "Versão da configuração"
+  },
+  "secondReviewer": "Segundo revisor necessário",
+  "documents": {
+    "title": "Evidência",
+    "documentType": "Tipo de documento",
+    "requirementCode": "Requisito",
+    "filename": "Ficheiro",
+    "type": "Tipo",
+    "status": "Estado",
+    "uploadedAt": "Carregado",
+    "file": "Ficheiro",
+    "upload": "Carregar",
+    "uploaded": "Documento carregado",
+    "selectRequired": "Selecione um requisito e um ficheiro.",
+    "empty": "Sem documentos.",
+    "removeTitle": "Remover documento?",
+    "removeBody": "Esta ação não pode ser revertida."
+  },
+  "reviews": {
+    "title": "Revisões",
+    "stage": "Fase da revisão",
+    "notes": "Notas da revisão",
+    "outcome": "Resultado indicativo",
+    "saveDraft": "Guardar rascunho",
+    "complete": "Concluir"
+  },
+  "review": {
+    "stage": "Fase da revisão",
+    "notes": "Notas da revisão",
+    "outcome": "Resultado indicativo",
+    "saveDraft": "Guardar rascunho",
+    "complete": "Concluir"
+  },
+  "decision": {
+    "note": "Nota (opcional)",
+    "reasonCode": "Código de motivo",
+    "reason": "Motivo",
+    "invalidStatus": "O processo não está à espera de decisão.",
+    "approvedSuccess": "Processo aprovado",
+    "rejectedSuccess": "Processo rejeitado"
+  },
+  "timeline": {
+    "empty": "Sem atividade ainda.",
+    "event": "Evento"
+  },
+  "resubmitSubtitle": "Carregue quaisquer documentos adicionais solicitados pelo revisor.",
+  "resubmitNote": "Notas para o revisor (opcional)",
+  "resubmitSuccess": "Processo resubmetido"
+}

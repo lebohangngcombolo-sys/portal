@@ -1,0 +1,138 @@
+{
+  "users": {
+    "title": "Utilizadores",
+    "search": "Pesquisar por nome, email ou telefone",
+    "reason": "Motivo (opcional)",
+    "unlockHint": "Desbloquear irá repor o contador de tentativas falhadas. O utilizador poderá entrar novamente.",
+    "columns": {
+      "name": "Nome",
+      "email": "Email",
+      "roles": "Funções",
+      "status": "Estado",
+      "created": "Criado"
+    },
+    "actions": {
+      "view": "Ver",
+      "suspend": "Suspender",
+      "reactivate": "Reativar",
+      "unlock": "Desbloquear",
+      "assignRoles": "Atribuir funções"
+    },
+    "roles": {
+      "SUPER_ADMIN": "Super Administrador",
+      "ADMIN": "Administrador",
+      "KYC_ANALYST": "Analista KYC",
+      "KYC_SUPERVISOR": "Supervisor KYC",
+      "COMPLIANCE_OFFICER": "Compliance",
+      "SUPPORT": "Suporte",
+      "CUSTOMER": "Cliente"
+    }
+  },
+  "roles": {
+    "title": "Funções",
+    "columns": {
+      "code": "Código",
+      "name": "Nome",
+      "description": "Descrição",
+      "system": "Sistema"
+    }
+  },
+  "permissions": {
+    "title": "Permissões",
+    "columns": {
+      "code": "Código",
+      "resource": "Recurso",
+      "action": "Ação",
+      "description": "Descrição"
+    }
+  },
+  "countries": {
+    "title": "Países",
+    "add": "Adicionar país",
+    "currencies": "Moedas",
+    "languages": "Idiomas",
+    "columns": {
+      "name": "País",
+      "iso2": "ISO2",
+      "iso3": "ISO3",
+      "defaultCurrency": "Moeda",
+      "defaultLanguage": "Idioma",
+      "status": "Estado"
+    },
+    "status": {
+      "enabled": "Ativo",
+      "disabled": "Inativo"
+    },
+    "configuration": {
+      "title": "Configuração",
+      "versions": "Versões",
+      "publish": "Publicar nova versão",
+      "rollback": "Reverter",
+      "currentVersion": "Versão ativa",
+      "changeSummary": "Resumo da alteração",
+      "version": "Versão",
+      "status": "Estado",
+      "published": "Publicado",
+      "summary": "Resumo",
+      "json": "Configuração (JSON)",
+      "rollbackConfirm": "Reverter para a versão {{version}}?"
+    }
+  },
+  "kycRequirements": {
+    "title": "Requisitos KYC",
+    "code": "Código do requisito",
+    "documentType": "Tipo de documento",
+    "customerType": "Tipo de cliente",
+    "required": "Obrigatório",
+    "enabled": "Ativo",
+    "description": "Descrição",
+    "mimeTypes": "Tipos MIME permitidos",
+    "maxFileSize": "Tamanho máximo do ficheiro (bytes)",
+    "validityDays": "Validade (dias)"
+  },
+  "orgRequirements": {
+    "title": "Requisitos de organização",
+    "code": "Código do requisito",
+    "organizationType": "Tipo de organização",
+    "required": "Obrigatório",
+    "enabled": "Ativo",
+    "description": "Descrição",
+    "validationRule": "Regra de validação (JSON, opcional)"
+  },
+  "templates": {
+    "title": "Modelos de notificação",
+    "add": "Novo modelo",
+    "preview": "Pré-visualizar",
+    "code": "Código do modelo",
+    "channel": "Canal",
+    "language": "Idioma",
+    "subject": "Modelo do assunto",
+    "body": "Modelo do corpo",
+    "enabled": "Ativo",
+    "variables": "Variáveis de exemplo",
+    "columns": {
+      "code": "Código",
+      "channel": "Canal",
+      "language": "Idioma",
+      "version": "Versão",
+      "status": "Estado",
+      "updated": "Atualizado"
+    }
+  },
+  "deliveries": {
+    "title": "Entregas",
+    "status": "Estado",
+    "statusLabel": "Estado",
+    "channel": "Canal",
+    "search": "Pesquisar",
+    "provider": "Fornecedor",
+    "attempts": "Tentativas",
+    "created": "Criado",
+    "detail": "Detalhe da entrega",
+    "failureCode": "Código de falha",
+    "failureReason": "Motivo da falha",
+    "submitted": "Submetido",
+    "delivered": "Entregue",
+    "retry": "Tentar novamente"
+  }
+}

@@ -1,0 +1,170 @@
+name: publish-static
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'translations/**'
+      - 'legal/**'
+      - 'assets/**'
+      - '.github/workflows/publish-static.yml'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment'
+        required: true
+        default: 'staging'
+        type: choice
+        options: [staging, production]
+
+concurrency:
+  group: publish-static-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  AWS_REGION: af-south-1
+  S3_BUCKET_STAGING: tradebridge-static-staging
+  S3_BUCKET_PROD: tradebridge-static-prod
+  CDN_DISTRIBUTION_STAGING: ${{ secrets.CDN_DISTRIBUTION_STAGING }}
+  CDN_DISTRIBUTION_PROD: ${{ secrets.CDN_DISTRIBUTION_PROD }}
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON files
+        run: |
+          set -euo pipefail
+          for file in translations/*.json; do
+            echo "Validating $file"
+            node -e "JSON.parse(require('fs').readFileSync('$file','utf8'))"
+          done
+
+      - name: Validate JSON language metadata
+        run: |
+          set -euo pipefail
+          for file in translations/*.json; do
+            expected="$(basename "$file" .json)"
+            actual=$(node -e "console.log(JSON.parse(require('fs').readFileSync('$file','utf8'))._meta.language)")
+            if [ "$expected" != "$actual" ]; then
+              echo "ERROR: $file has _meta.language='$actual' but filename says '$expected'"
+              exit 1
+            fi
+          done
+
+      - name: Validate SVGs parse
+        run: |
+          set -euo pipefail
+          for file in assets/flags/*.svg assets/logos/*.svg; do
+            echo "Checking $file"
+            grep -q '<svg' "$file" || { echo "Not a valid SVG: $file"; exit 1; }
+          done
+
+      - name: Check legal documents are non-empty
+        run: |
+          set -euo pipefail
+          for file in legal/*.md; do
+            size=$(wc -c < "$file")
+            if [ "$size" -lt 500 ]; then
+              echo "ERROR: $file is suspiciously small ($size bytes)"
+              exit 1
+            fi
+          done
+
+  publish-staging:
+    if: github.ref == 'refs/heads/main' || github.event.inputs.environment == 'staging'
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: staging
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_STAGING }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sync translations (short cache)
+        run: |
+          aws s3 sync translations/ "s3://${{ env.S3_BUCKET_STAGING }}/translations/" \
+            --delete \
+            --cache-control "public, max-age=300, must-revalidate" \
+            --content-type "application/json; charset=utf-8"
+
+      - name: Sync legal documents (1h cache)
+        run: |
+          aws s3 sync legal/ "s3://${{ env.S3_BUCKET_STAGING }}/legal/" \
+            --delete \
+            --cache-control "public, max-age=3600" \
+            --content-type "text/markdown; charset=utf-8"
+
+      - name: Sync assets (long cache, immutable)
+        run: |
+          aws s3 sync assets/ "s3://${{ env.S3_BUCKET_STAGING }}/assets/" \
+            --delete \
+            --cache-control "public, max-age=86400, immutable" \
+            --content-type "image/svg+xml"
+
+      - name: Invalidate CDN (staging)
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ env.CDN_DISTRIBUTION_STAGING }}" \
+            --paths "/translations/*" "/legal/*" "/assets/*"
+
+  publish-production:
+    if: github.event.inputs.environment == 'production'
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: production
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_PROD }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sync translations (short cache)
+        run: |
+          aws s3 sync translations/ "s3://${{ env.S3_BUCKET_PROD }}/translations/" \
+            --delete \
+            --cache-control "public, max-age=300, must-revalidate" \
+            --content-type "application/json; charset=utf-8"
+
+      - name: Sync legal documents (1h cache)
+        run: |
+          aws s3 sync legal/ "s3://${{ env.S3_BUCKET_PROD }}/legal/" \
+            --delete \
+            --cache-control "public, max-age=3600" \
+            --content-type "text/markdown; charset=utf-8"
+
+      - name: Sync assets (long cache, immutable)
+        run: |
+          aws s3 sync assets/ "s3://${{ env.S3_BUCKET_PROD }}/assets/" \
+            --delete \
+            --cache-control "public, max-age=86400, immutable" \
+            --content-type "image/svg+xml"
+
+      - name: Invalidate CDN (production)
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ env.CDN_DISTRIBUTION_PROD }}" \
+            --paths "/translations/*" "/legal/*" "/assets/*"

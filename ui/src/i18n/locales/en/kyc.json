@@ -1,0 +1,114 @@
+{
+  "statuses": {
+    "DRAFT": "Draft",
+    "SUBMITTED": "Submitted",
+    "IN_REVIEW": "In review",
+    "INFORMATION_REQUESTED": "Information requested",
+    "RESUBMITTED": "Resubmitted",
+    "APPROVED": "Approved",
+    "REJECTED": "Rejected"
+  },
+  "organizationStatuses": {
+    "DRAFT": "Draft",
+    "PENDING_REVIEW": "Pending review",
+    "APPROVED": "Approved",
+    "REJECTED": "Rejected",
+    "WITHDRAWN": "Withdrawn"
+  },
+  "caseType": {
+    "ONBOARDING": "Onboarding",
+    "PERIODIC_REVIEW": "Periodic review",
+    "ENHANCED_DUE_DILIGENCE": "Enhanced due diligence"
+  },
+  "riskLevels": {
+    "LOW": "Low",
+    "MEDIUM": "Medium",
+    "HIGH": "High",
+    "CRITICAL": "Critical"
+  },
+  "requirements": {
+    "DIRECTOR_ID_COPY": "Certified copy of director ID",
+    "COMPANY_REGISTRATION_CERT": "Company registration certificate",
+    "CERTIDAO_PERMANENTE": "Certidão Permanente",
+    "PROOF_OF_ADDRESS": "Proof of business address (last 3 months)",
+    "PASSPORT_COPY": "Copy of passport bio page",
+    "empty": "No requirements defined.",
+    "fileTypes": "Allowed: {{types}}"
+  },
+  "actions": {
+    "startCase": "Start a new KYC case",
+    "assignReviewer": "Assign reviewer",
+    "requestInformation": "Request more information",
+    "resubmit": "Resubmit",
+    "review": "Review",
+    "decide": "Decide",
+    "approve": "Approve",
+    "reject": "Reject"
+  },
+  "decisions": {
+    "APPROVED": "Approved",
+    "REJECTED": "Rejected",
+    "empty": "No decisions recorded yet.",
+    "title": "Decisions"
+  },
+  "filters": {
+    "status": "Status",
+    "assignedToMe": "Assigned to me"
+  },
+  "columns": {
+    "caseNumber": "Case",
+    "type": "Type",
+    "risk": "Risk",
+    "status": "Status",
+    "submitted": "Submitted",
+    "assignedReviewer": "Assigned reviewer",
+    "configVersion": "Configuration version"
+  },
+  "secondReviewer": "Second reviewer required",
+  "documents": {
+    "title": "Evidence",
+    "documentType": "Document type",
+    "requirementCode": "Requirement",
+    "filename": "File",
+    "type": "Type",
+    "status": "Status",
+    "uploadedAt": "Uploaded",
+    "file": "File",
+    "upload": "Upload",
+    "uploaded": "Document uploaded",
+    "selectRequired": "Select a requirement and a file.",
+    "empty": "No documents yet.",
+    "removeTitle": "Remove document?",
+    "removeBody": "This cannot be undone."
+  },
+  "reviews": {
+    "title": "Reviews",
+    "stage": "Review stage",
+    "notes": "Review notes",
+    "outcome": "Advisory outcome",
+    "saveDraft": "Save draft",
+    "complete": "Complete"
+  },
+  "review": {
+    "stage": "Review stage",
+    "notes": "Review notes",
+    "outcome": "Advisory outcome",
+    "saveDraft": "Save draft",
+    "complete": "Complete"
+  },
+  "decision": {
+    "note": "Note (optional)",
+    "reasonCode": "Reason code",
+    "reason": "Reason",
+    "invalidStatus": "Case is not awaiting a decision.",
+    "approvedSuccess": "Case approved",
+    "rejectedSuccess": "Case rejected"
+  },
+  "timeline": {
+    "empty": "No activity yet.",
+    "event": "Event"
+  },
+  "resubmitSubtitle": "Upload any additional documents the reviewer requested.",
+  "resubmitNote": "Notes for the reviewer (optional)",
+  "resubmitSuccess": "Case resubmitted"
+}
