@@ -30,5 +30,11 @@ describe('translation resources', () => {
     expect(i18n.t('account.security.subtitle', { lng: 'pt' })).toBe(
       'Faça a gestão da palavra-passe, da autenticação de dois fatores e dos dispositivos com sessão iniciada.',
     );
+    expect(i18n.t('organization.create.sections.representatives', { lng: 'en' })).toBe(
+      'Representatives',
+    );
+    expect(i18n.t('organization.create.sections.declaration', { lng: 'pt' })).toBe(
+      'Declaração de propriedade',
+    );
   });
 });

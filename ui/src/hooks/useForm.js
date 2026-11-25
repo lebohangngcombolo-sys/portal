@@ -59,7 +59,7 @@ export function useForm({
 
   const setFieldValue = useCallback(
     async (name, value) => {
-      const next = { ...values, [name]: value };
+      const next = setIn(values, name, value);
       setValues(next);
       if (validateOnChange) {
         const fieldErrors = await validate(next);
@@ -71,7 +71,7 @@ export function useForm({
 
   const setFieldTouched = useCallback(
     async (name, isTouched = true) => {
-      setTouched((prev) => ({ ...prev, [name]: isTouched }));
+      setTouched((prev) => setIn(prev, name, isTouched));
       if (isTouched && validateOnBlur) {
         const fieldErrors = await validate(values);
         setErrors((prev) => ({ ...prev, [name]: fieldErrors[name] || null }));
@@ -138,7 +138,7 @@ export function useForm({
   const getFieldProps = useCallback(
     (name) => ({
       name,
-      value: values[name] ?? '',
+      value: getIn(values, name) ?? '',
       onChange: (e) => {
         const v = e?.target ? e.target.value : e;
         return setFieldValue(name, v);
@@ -173,4 +173,45 @@ export function useForm({
     resetForm,
     getFieldProps,
   };
+}
+
+function getPathSegments(path) {
+  return String(path).replace(/\[(\d+)\]/g, '.$1').split('.').filter(Boolean);
+}
+
+function getIn(object, path) {
+  return getPathSegments(path).reduce(
+    (value, segment) => (value == null ? undefined : value[segment]),
+    object,
+  );
+}
+
+function setIn(object, path, value) {
+  const segments = getPathSegments(path);
+  if (segments.length === 0) return object;
+
+  const root = Array.isArray(object) ? [...object] : { ...object };
+  let source = object;
+  let target = root;
+
+  segments.forEach((segment, index) => {
+    if (index === segments.length - 1) {
+      target[segment] = value;
+      return;
+    }
+
+    const nextSource = source?.[segment];
+    const nextTarget = Array.isArray(nextSource)
+      ? [...nextSource]
+      : nextSource && typeof nextSource === 'object'
+        ? { ...nextSource }
+        : Number.isInteger(Number(segments[index + 1]))
+          ? []
+          : {};
+    target[segment] = nextTarget;
+    source = nextSource;
+    target = nextTarget;
+  });
+
+  return root;
 }

@@ -138,8 +138,12 @@
         "basic": "Informação básica",
         "registration": "Registo",
         "contact": "Morada da empresa",
-        "address": "Morada da empresa"
+        "address": "Morada da empresa",
+        "representatives": "Representantes",
+        "beneficialOwners": "Beneficiários efetivos",
+        "declaration": "Declaração de propriedade"
       },
+      "validationError": "Reveja as informações assinaladas antes de submeter.",
       "fields": {
         "legalName": "Nome legal",
         "tradingName": "Nome comercial",
