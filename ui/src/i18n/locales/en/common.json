@@ -138,8 +138,12 @@
         "basic": "Basic information",
         "registration": "Registration",
         "contact": "Business address",
-        "address": "Business address"
+        "address": "Business address",
+        "representatives": "Representatives",
+        "beneficialOwners": "Beneficial owners",
+        "declaration": "Ownership declaration"
       },
+      "validationError": "Please review the highlighted information before submitting.",
       "fields": {
         "legalName": "Legal name",
         "tradingName": "Trading name",

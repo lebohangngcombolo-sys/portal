@@ -13,6 +13,7 @@ import { companyOnboardingSchema } from '../configuration/validation.js';
 import { COMPANY_ONBOARDING_SECTIONS } from '../configuration/sections.js';
 import { Stepper } from '../../components/primitives/Stepper.jsx';
 import { Button } from '../../components/primitives/Button.jsx';
+import { Alert } from '../../components/primitives/Alert.jsx';
 import { CompanyDetailsSection } from '../sections/CompanyDetailsSection.jsx';
 import { CompanyAddressSection } from '../sections/CompanyAddressSection.jsx';
 import { RepresentativeSection } from '../sections/RepresentativeSection.jsx';
@@ -68,16 +69,34 @@ export function CompanyOnboarding({ entityId, onSubmit }) {
   });
 
   const [stepIndex, setStepIndex] = useState(0);
+  const [validationMessage, setValidationMessage] = useState(null);
   const steps = COMPANY_ONBOARDING_SECTIONS.map((s) => s.id);
 
   const persist = () => saveDraft(WORKFLOW_ID, form.values, entityId);
   const next = async () => {
     persist();
-    if (stepIndex < steps.length - 1) setStepIndex(stepIndex + 1);
-    else await form.handleSubmit();
+    setValidationMessage(null);
+    if (stepIndex < steps.length - 1) {
+      setStepIndex(stepIndex + 1);
+      return;
+    }
+
+    const result = await form.handleSubmit();
+    if (result?.errors) {
+      const invalidFields = Object.keys(result.errors);
+      const firstInvalidStep = COMPANY_ONBOARDING_SECTIONS.findIndex((section) =>
+        invalidFields.some((field) => {
+          const topLevelField = field.replace(/\[\d+\]/g, '').split('.')[0];
+          return section.fields.includes(topLevelField);
+        }),
+      );
+      if (firstInvalidStep >= 0) setStepIndex(firstInvalidStep);
+      setValidationMessage(t('organization.create.validationError'));
+    }
   };
   const back = () => {
     persist();
+    setValidationMessage(null);
     if (stepIndex > 0) setStepIndex(stepIndex - 1);
   };
 
@@ -112,6 +131,7 @@ export function CompanyOnboarding({ entityId, onSubmit }) {
   return (
     <div>
       <Stepper steps={steps.map((s) => t(`organization.create.sections.${s}`))} current={stepIndex} />
+      {validationMessage && <Alert variant="error">{validationMessage}</Alert>}
 
       {steps[stepIndex] === 'basic' && <CompanyDetailsSection form={form} />}
       {steps[stepIndex] === 'registration' && <CompanyDetailsSection form={form} />}
